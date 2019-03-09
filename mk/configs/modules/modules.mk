@@ -70,8 +70,14 @@ SVC_MODULES := \
 	Svc/FileManager
 
 DEMO_DRV_MODULES := \
+	Drv/BlockDriver \
 	Drv/DataTypes \
-	Drv/BlockDriver
+	Drv/SerialDriverPorts \
+	Drv/SpiDriverPorts \
+	Drv/I2CDriverPorts \
+	Drv/LinuxSerialDriver \
+	Drv/LinuxSpiDriver \
+	Drv/LinuxI2CDriver
 	
 LINUX_DRV_MODULES := \
 	Drv/LinuxGpioDriver \
@@ -89,7 +95,54 @@ REF_MODULES := \
 	Ref/SignalGen \
 	Ref/PingReceiver
 	
+
+CMUAPP_MODULES := \
+	CmuApp/Top \
+	CmuApp/RateCounter
+
+CmuApp_MODULES := \
+	\
+	$(CMUAPP_MODULES) \
+	\
+	$(SVC_MODULES) \
+	\
+	$(DEMO_DRV_MODULES) \
+	\
+	$(FW_MODULES) \
+	\
+	$(OS_MODULES) \
+	\
+	$(CFDP_MODULES) \
+  	\
+  	$(UTILS_MODULES)
+
 Ref_MODULES := \
+	\
+	$(REF_MODULES) \
+	\
+	$(SVC_MODULES) \
+	\
+	$(DEMO_DRV_MODULES) \
+	\
+	$(FW_MODULES) \
+	\
+	$(OS_MODULES) \
+	\
+	$(CFDP_MODULES) \
+  	\
+  	$(UTILS_MODULES)
+
+CUBEROVERFSW_MODULES := \
+	CubeRoverFSW/Top \
+	CubeRoverFSW/SystemDriver \
+	CubeRoverFSW/RadioDriver \
+	CubeRoverFSW/SensorDriver \
+	CubeRoverFSW/CameraDriver \
+	CubeRoverFSW/MotorDriver
+
+CubeRoverFSW_MODULES := \
+	\
+	$(CUBEROVERFSW_MODULES) \
 	\
 	$(REF_MODULES) \
 	\
@@ -203,7 +256,7 @@ OTHER_MODULES := \
 
 # List deployments
 
-DEPLOYMENTS := Ref acdev RPI
+DEPLOYMENTS := Ref CubeRoverFSW #acdev RPI CmuApp
 
 # Location of ground/gse software. Autocoded dictionary elements are copied here.
 GDS_MODULE := Gse
