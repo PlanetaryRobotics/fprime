@@ -27,7 +27,10 @@
         <port name="Tlm" data_type="Fw::Tlm"  kind="output"    max_number="1">
         </port>
 
-        <port name="SpiReadWrite" data_type="Drv::SpiReadWrite"  kind="output"    max_number="1">
+        <port name="SpiRead" data_type="Drv::SpiReadWrite"  kind="async_input"    max_number="1">
+        </port>
+
+        <port name="SpiWrite" data_type="Drv::SpiReadWrite"  kind="output"    max_number="1">
         </port>
 
         <port name="Sched" data_type="Svc::Sched"  kind="async_input"    max_number="1">

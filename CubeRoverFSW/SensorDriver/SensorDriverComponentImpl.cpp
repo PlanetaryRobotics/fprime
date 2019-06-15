@@ -69,6 +69,16 @@ namespace Drv {
   }
 
   void SensorDriverComponentImpl ::
+    SpiRead_handler(
+        const NATIVE_INT_TYPE portNum,
+        Fw::Buffer &writeBuffer,
+        Fw::Buffer &readBuffer
+    )
+  {
+    // TODO
+  }
+
+  void SensorDriverComponentImpl ::
     Sched_handler(
         const NATIVE_INT_TYPE portNum,
         NATIVE_UINT_TYPE context

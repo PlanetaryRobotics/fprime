@@ -68,6 +68,14 @@ namespace Drv {
           Drv::DataBuffer &buff /*!< A data buffer*/
       );
 
+      //! Handler implementation for SpiRead
+      //!
+      void SpiRead_handler(
+          const NATIVE_INT_TYPE portNum, /*!< The port number*/
+          Fw::Buffer &writeBuffer, 
+          Fw::Buffer &readBuffer 
+      );
+
       //! Handler implementation for Sched
       //!
       void Sched_handler(
