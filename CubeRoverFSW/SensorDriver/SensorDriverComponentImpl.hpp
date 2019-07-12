@@ -1,6 +1,6 @@
 // ====================================================================== 
 // \title  SensorDriverImpl.hpp
-// \author erynqian
+// \author sisyphuslaetus
 // \brief  hpp file for SensorDriver component implementation class
 //
 // \copyright
@@ -8,14 +8,14 @@
 // ALL RIGHTS RESERVED.  United States Government Sponsorship
 // acknowledged. Any commercial use must be negotiated with the Office
 // of Technology Transfer at the California Institute of Technology.
-// 
+//
 // This software may be subject to U.S. export control laws and
 // regulations.  By accepting this document, the user agrees to comply
 // with all U.S. export laws and regulations.  User has the
 // responsibility to obtain export licenses, or other export authority
 // as may be required before exporting such information to foreign
 // countries or providing access to foreign persons.
-// ====================================================================== 
+// ======================================================================
 
 #ifndef SensorDriver_HPP
 #define SensorDriver_HPP
@@ -72,8 +72,8 @@ namespace Drv {
       //!
       void SpiRead_handler(
           const NATIVE_INT_TYPE portNum, /*!< The port number*/
-          Fw::Buffer &writeBuffer, 
-          Fw::Buffer &readBuffer 
+          Fw::Buffer &writeBuffer,
+          Fw::Buffer &readBuffer
       );
 
       //! Handler implementation for Sched
