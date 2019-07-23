@@ -99,6 +99,7 @@
                   <arg name="rangebyte" type="int32">
                       <comment>byte that denotes what range to choose</comment>
                   </arg>
-              <args>
+              </args>
           </event>
+      </events>
 </component>
